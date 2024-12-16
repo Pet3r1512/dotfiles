@@ -33,21 +33,21 @@ config.colors = {
 }
 
 config.keys = {
-  -- Ctrl + T to split a new pane horizontally
-  {key="T", mods="CTRL", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
 
-  -- Ctrl + Shift + T to split a new pane vertically
+  {key="C", mods="CTRL", action=wezterm.action{CopyTo="Clipboard"}},
+
+  {key="V", mods="CTRL", action=wezterm.action{PasteFrom="Clipboard"}},
+
+  {key="t", mods="CTRL", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
+
   {key="T", mods="CTRL|SHIFT", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
 
-  -- Ctrl + W to close the current pane
-  {key="W", mods="CTRL", action=wezterm.action{CloseCurrentPane={confirm=false}}},
+  {key="w", mods="CTRL", action=wezterm.action{CloseCurrentPane={confirm=false}}},
 
-  -- Alt + Arrow keys to navigate between panes
   {key="LeftArrow", mods="ALT", action=wezterm.action{ActivatePaneDirection="Left"}},
   {key="RightArrow", mods="ALT", action=wezterm.action{ActivatePaneDirection="Right"}},
   {key="UpArrow", mods="ALT", action=wezterm.action{ActivatePaneDirection="Up"}},
   {key="DownArrow", mods="ALT", action=wezterm.action{ActivatePaneDirection="Down"}},
 }
-
 
 return config
