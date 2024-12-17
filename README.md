@@ -1,6 +1,6 @@
 # dotfiles
 
-## This is my configs for all apps or tolls that I am using.
+## This is my configs for all apps or tools that I am using.
 
 ### Current dotfiles:
 - Wezterm
